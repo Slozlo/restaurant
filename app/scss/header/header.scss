@@ -1,0 +1,80 @@
+@import "../mixins/mixins.scss";
+
+.header {
+  padding: 70px 0;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @include logo();
+    // font-size: 26px;
+    // font-family: "Poppins-Bold";
+    // color: #0a043c;
+    // display: flex;
+    // align-items: center;
+
+    // span {
+    //   margin-left: 10px;
+    // }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+        font-family: "Poppins-Medium";
+        font-size: 16px;
+        color: #0a043c;
+
+        &:hover {
+          cursor: pointer;
+          color: #9175f9;
+        }
+
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+
+  &__register {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      width: 45px;
+    }
+  }
+
+  &__btn {
+    button {
+      @include button(130px);
+      // background: rgba(145, 117, 249, 0.4);
+      // border: none;
+      // color: #fff;
+      // font-size: 15px;
+      // border-radius: 20px;
+      // padding: 13px 35px;
+      // color: #9175f9;
+      // font-family: "Poppins-Medium";
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

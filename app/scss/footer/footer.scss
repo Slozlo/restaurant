@@ -1,0 +1,85 @@
+@import "../variables/variables.scss";
+@import "../mixins/mixins.scss";
+
+.footer {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    padding: 100px 0;
+    display: flex;
+  }
+
+  &__contact {
+    max-width: 370px;
+  }
+
+  &__logo {
+    @include logo();
+  }
+
+  &__text {
+    @include text();
+    margin: 25px 0;
+  }
+
+  &__mail {
+    @include footer_text();
+    margin-bottom: 25px;
+  }
+
+  &__phone {
+    @include footer_text();
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 90px;
+  }
+
+  &__title {
+    font-family: "Poppins-Medium";
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: #0a043c;
+    margin-bottom: 35px;
+  }
+
+  &__descr {
+    font-family: "Poppins-Light";
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.3px;
+    color: #070a28;
+    opacity: 0.5;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $main-color;
+      opacity: 1;
+    }
+  }
+
+  &__copyright {
+    background-color: $main-color;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins-Medium";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.257143px;
+    color: #ffffff;
+  }
+}

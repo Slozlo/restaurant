@@ -1,0 +1,40 @@
+@import "./mixins/mixins.scss";
+@import "./header/header.scss";
+@import "./order/order.scss";
+@import "./closely/closely.scss";
+@import "./service/service.scss";
+@import "./menu/menu.scss";
+@import "./team/team.scss";
+@import "./footer/footer.scss";
+
+@font-face {
+  src: url("../fonts/Poppins-Bold.ttf");
+  font-family: "Poppins-Bold";
+}
+
+@font-face {
+  src: url("../fonts/Poppins-Light.ttf");
+  font-family: "Poppins-Light";
+}
+
+@font-face {
+  src: url("../fonts/Poppins-Medium.ttf");
+  font-family: "Poppins-Medium";
+}
+
+.container {
+  width: 1450px;
+  margin: 0 auto;
+
+  @include medium() {
+    width: 1150px;
+  }
+
+  @include small() {
+    width: 900px;
+  }
+}
+
+.disabled {
+  display: none;
+}

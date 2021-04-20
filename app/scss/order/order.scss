@@ -1,0 +1,102 @@
+@import "../mixins/mixins.scss";
+
+.order {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include title(0);
+
+    @include medium() {
+      max-width: 370px;
+    }
+  }
+
+  &__text {
+    margin: 20px 0 40px 0;
+    font-family: "Poppins-Light";
+    font-size: 16px;
+    color: #79869f;
+  }
+
+  &__search {
+    width: 560px;
+    position: relative;
+    margin-bottom: 56px;
+
+    @include medium() {
+      width: 450px;
+    }
+
+    @include small() {
+      width: 350px;
+    }
+
+    input {
+      background: #ffffff;
+      box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.07);
+      border: none;
+      border-radius: 70px;
+      width: 100%;
+      padding: 28px 152px 28px 32px;
+      color: #79869f;
+      font-family: "Poppins-Light";
+      font-size: 16px;
+      outline: none;
+    }
+
+    span {
+      background: #9175f9;
+      padding: 17px 23px;
+      border-radius: 70px;
+      font-family: "Poppins-Light";
+      font-size: 18px;
+      color: #fff;
+      position: absolute;
+      right: -170px;
+      top: 11px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__scroll {
+    color: #79869f;
+    font-family: "Poppins-Medium";
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      margin-left: 20px;
+    }
+  }
+
+  &__img {
+    img {
+      width: 660px;
+
+      @include medium() {
+        width: 400px;
+      }
+
+      @include small() {
+        width: 300px;
+      }
+    }
+  }
+}

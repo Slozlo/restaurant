@@ -1,0 +1,94 @@
+@import "../variables/variables.scss";
+
+@mixin medium() {
+  @media (max-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin small() {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin button($width) {
+  width: $width;
+  background: rgba(145, 117, 249, 0.4);
+  border: none;
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 13px 0;
+  // color: #9175f9;
+  color: $main-color;
+  font-family: "Poppins-Medium";
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+@mixin logo {
+  font-size: 26px;
+  font-family: "Poppins-Bold";
+  color: #0a043c;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+@mixin title($bottom) {
+  font-family: "Poppins-Bold";
+  font-size: 40px;
+  line-height: 60px;
+  color: #0a043c;
+  margin-bottom: $bottom;
+
+  @include medium() {
+    font-size: 30px;
+  }
+}
+
+@mixin text {
+  font-family: "Poppins-Light";
+  font-size: 16px;
+  line-height: 36px;
+  color: #79869f;
+}
+
+@mixin item {
+  font-family: "Poppins-Medium";
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: $main-color;
+  &:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 90px;
+    height: 4px;
+    background-color: $main-color;
+    position: relative;
+    left: 7px;
+    bottom: 2px;
+  }
+}
+
+@mixin footer_text {
+  font-family: "Poppins-Light";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.85);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 20px;
+  }
+}
